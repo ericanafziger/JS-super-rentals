@@ -1,0 +1,17 @@
+<h1>Important Announcements</h1>
+
+<ul>
+  {{#each model as |announcement|}}
+     <li>
+       <h4>{{announcement.title}}</h4>
+        <p>{{announcement.date}}</p>
+        <p>{{announcement.message}}</p>
+        <button {{action 'destroyAnnouncement' announcement}}>Delete Announcement</button>
+     </li>
+  {{/each}}
+</ul>
+
+{{new-announcement saveAnnouncement="saveAnnouncement"}}
+
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'contact'}}Click here to contact us.{{/link-to}}

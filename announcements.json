@@ -1,0 +1,13 @@
+{
+  "announcements": [{
+    "id": 0,
+    "title": "Weather Warning",
+    "date": "January 21, 2017",
+    "message": "Today there is a weather advisory in the Portland Metro Area. Be warned that commute times may be longer than expected."
+  }, {
+    "id": 1,
+    "title": "Staff Away",
+    "date": "February 20, 2017",
+    "message": "On February 28th the staff of Super Rentals will be away."
+  }]
+}
