@@ -8,14 +8,20 @@ export default Ember.Component.extend({
     },
     saveRental1() {
       var params = {
-        owner: this.get('owner'),
-        city: this.get('city'),
-        type: this.get('type'),
-        image: this.get('image'),
-        bedrooms: this.get('bedrooms'),
+        owner: this.get('owner') ? this.get('owner') : '',
+        city: this.get('city') ? this.get('city') : '',
+        type: this.get('type') ? this.get('type') : '',
+        image: this.get('image') ? this.get('image') : '',
+        bedrooms: this.get('bedrooms') ? this.get('bedrooms') : '',
       };
       this.set('addNewRental', false);
       this.sendAction('saveRental2', params);
+
+      var inputs = document.getElementsByTagName("input");
+      for (var i=0; i<inputs.length; i++){
+        var attribute = $(inputs[i]).attr("id");
+        this.set(attribute, "");
+      }
     }
   }
 });
