@@ -1,4 +1,9 @@
-<p>Located in {{rental.city}}, this {{rental.bedrooms}} bedroom {{rental.type}} is available by arrangement though {{rental.owner}}.</p>
-<br>
-<p><img src={{rental.image}} alt={{rental.type}}></p>
-<button {{action 'delete' rental}}>Delete</button>
+<!-- Nested in 'rental' -->
+<div class="rental-detail">
+  <h2>{{rental.city}} {{rental.type}}</h2>
+  <img src={{rental.image}} alt={{rental.type}}>
+  <p>Location: {{rental.city}}</p>
+  <p>{{rental.bedrooms}} bedroom {{rental.type}}</p>
+  <p>Contact: {{rental.owner}}</p>
+  <br>
+</div>

@@ -1,15 +1,17 @@
-<h1> Welcome to Super Rentals </h1>
+<!-- Links directly from router -->
+<h3> Welcome to Super Rentals </h3>
 
-We hope you find exactly what you're looking for in a place to stay.
+<p>We hope you find exactly what you're looking for in a place to stay.</p>
 
-<ul>
+<br>
+
+<h4>Available rentals:</h4>
+<div class="home">
+
   {{#each model as |rental|}}
-    {{rental-tile rental=rental}}
+  {{rental-tile rental=rental}}
   {{/each}}
-</ul>
 
+
+</div>
 {{new-rental saveRental2="saveRental3"}}
-
-{{#link-to 'about'}}About{{/link-to}}
-{{#link-to 'contact'}}Click here to contact us.{{/link-to}}
-{{#link-to 'announcement'}}Important announcements{{/link-to}}

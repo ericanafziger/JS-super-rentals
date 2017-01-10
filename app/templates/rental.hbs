@@ -1,7 +1,5 @@
-<h2>More information about {{model.owner}}'s {{model.type}}</h2>
-
-{{rental-detail rental=model destroyRental="destroyRental"}}
-
-{{update-rental rental=model update="update"}}
-
-{{#link-to 'index'}}Go home{{/link-to}}
+<!-- Links directly from router -->
+{{rental-detail rental=model}}
+<div class="update">
+  {{update-rental rental=model update="update" destroyRental="destroyRental"}}
+</div>

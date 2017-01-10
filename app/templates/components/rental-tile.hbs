@@ -1,8 +1,2 @@
-<li>
-  {{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} in {{rental.city}} {{/link-to}}
-  {{#if isImageShowing }}
-    <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
-  {{else}}
-    <button {{action 'imageShow'}}>Image</button>
-  {{/if}}
-</li>
+<!-- Nested in 'index' -->
+{{#link-to 'rental' rental.id}}<h5>{{rental.owner}}'s {{rental.type}} in {{rental.city}} </h5><img src={{rental.image}} alt={{rental.type}}>{{/link-to}}
