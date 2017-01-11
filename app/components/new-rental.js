@@ -19,7 +19,7 @@ export default Ember.Component.extend({
 
       var inputs = document.getElementsByTagName("input");
       for (var i=0; i<inputs.length; i++){
-        var attribute = $(inputs[i]).attr("id");
+        var attribute = Ember.$(inputs[i]).attr("id");
         this.set(attribute, "");
       }
     }
